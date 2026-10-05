@@ -136,10 +136,7 @@ function CompanyLogo({ entry }: { entry: Entry }): ReactNode {
     <span
       className="ring-foreground/8 inline-flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden bg-white ring-1 dark:ring-white/10"
       aria-hidden="true"
-      style={{
-        borderRadius: 14,
-        ...(iconSrc ? {} : { backgroundColor: entry.brand }),
-      }}
+      style={{ borderRadius: 14 }}
     >
       {iconSrc ? (
         <img
@@ -151,7 +148,7 @@ function CompanyLogo({ entry }: { entry: Entry }): ReactNode {
           draggable={false}
         />
       ) : (
-        <span className="text-[18px] font-semibold tracking-tight text-white">
+        <span className="text-foreground/60 text-[18px] font-semibold tracking-tight">
           {initials}
         </span>
       )}
