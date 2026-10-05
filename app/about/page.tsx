@@ -30,13 +30,13 @@ export default function AboutPage(): ReactNode {
             </h1>
             <div className="mt-8 space-y-6 text-[17px] leading-[1.7] tracking-tight text-foreground/75 sm:text-[18px]">
               <p>
-                A <strong className="font-semibold text-foreground">product designer and frontend engineer</strong> passionate about building intuitive, human-centered digital experiences. With a background in <strong className="font-semibold text-foreground">visual craft</strong> and <strong className="font-semibold text-foreground">interaction design</strong>, I bring a unique blend of design thinking and technical execution to every project.
+                I am a <strong className="font-semibold text-foreground">software engineer</strong> studying Informatics Engineering at <strong className="font-semibold text-foreground">Politeknik IDN Bogor</strong>, passionate about building robust web and mobile applications.
               </p>
               <p>
-                My journey into design began when I realized how often good user experience was missing from powerful tools. That led me to embrace <strong className="font-semibold text-foreground">user-centered design</strong> as both a mindset and a craft, one that balances clarity, creativity, and functionality.
+                My development journey covers a wide spectrum of modern technologies, from crafting mobile interfaces with <strong className="font-semibold text-foreground">Flutter and Dart</strong> to building scalable web platforms using <strong className="font-semibold text-foreground">Vue.js, Nuxt, Next.js, and Laravel</strong>.
               </p>
               <p>
-                Currently leading design at small product teams shipping software for <strong className="font-semibold text-foreground">creative professionals</strong>, I&rsquo;m always looking for opportunities to <strong className="font-semibold text-foreground">shape thoughtful interfaces and build scalable design systems</strong>.
+                Beyond writing code, I enjoy <strong className="font-semibold text-foreground">optimizing performance</strong>, managing backend configurations with <strong className="font-semibold text-foreground">Supabase and Node.js</strong>, and implementing practical solutions—like local SEO and containerization—to solve real-world problems efficiently.
               </p>
             </div>
           </div>

@@ -47,14 +47,14 @@ export function ContactCard(): ReactNode {
                     lucideIcon={Mail}
                   />
                   <SocialIcon
-                    href="https://www.linkedin.com"
+                    href="https://www.linkedin.com/in/muhammad-fariz-ma-ruf-annabil-887780317"
                     label="LinkedIn"
                     imageSrc="/linkedin.svg"
                   />
                   <SocialIcon
                     href="https://github.com/rupp150406"
                     label="github"
-                    imageSrc="/github-mark.svg"
+                    imageSrc="/github.svg"
                   />
                 </div>
                 <div className="flex flex-col items-center gap-1 text-center">
@@ -102,10 +102,10 @@ function SocialIcon({
         <Image
           src={imageSrc}
           alt=""
-          width={14}
-          height={14}
+          width={18}
+          height={18}
           aria-hidden="true"
-          className="max-h-[14px] max-w-[14px] object-contain dark:invert"
+          className="max-h-[18px] max-w-[18px] object-contain dark:invert"
         />
       ) : null}
     </Link>

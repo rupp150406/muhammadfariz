@@ -1,0 +1,50 @@
+{
+  "about": {
+    "section": "About Me",
+    "heading": "Hello! I'm Muhammad Fariz.",
+    "bioParagraphs": [
+      "I am a software engineer studying Informatics Engineering at Politeknik IDN Bogor, passionate about building robust web and mobile applications.",
+      "My development journey covers a wide spectrum of modern technologies, from crafting mobile interfaces with Flutter and Dart to building scalable web platforms using Vue.js, Nuxt, Next.js, and Laravel.",
+      "Beyond writing code, I enjoy optimizing performance, managing backend configurations with Supabase and Node.js, and implementing practical solutions—like local SEO and containerization—to solve real-world problems efficiently."
+    ]
+  },
+  "whatIDo": [
+    "Mobile Development (Flutter, Dart)",
+    "Frontend Engineering (Vue.js, Nuxt, Next.js)",
+    "Backend & APIs (Laravel, Node.js, PHP)",
+    "Database & Auth (Supabase, Firebase)",
+    "UI/UX Implementation (Tailwind CSS, Figma)",
+    "Containerization (Docker)",
+    "Search Engine Optimization (Local SEO, JSON-LD)"
+  ],
+  "projects": [
+    {
+      "id": "blogin",
+      "iconLabel": "Blogin",
+      "title": "A mobile blogging application utilizing local data storage for a seamless reading and writing experience.",
+      "description": "Developed a dedicated mobile application built entirely with Flutter and Hive for fast, responsive local data persistence.",
+      "meta": "Mobile Developer, 2025"
+    },
+    {
+      "id": "monitoring-qurban",
+      "iconLabel": "Monitoring Qurban",
+      "title": "A real-time digital ecosystem for tracking Qurban activities, featuring public TV monitors and a field PWA.",
+      "description": "Engineered a robust system for AhsanTV using Supabase. It includes an admin dashboard, a QR-scan-based PWA for field teams to track animal arrivals and slaughtering, and real-time syncing with offline local storage support.",
+      "meta": "Full-Stack Developer, 2026"
+    },
+    {
+      "id": "tanya-ustadz",
+      "iconLabel": "Tanya Ustadz",
+      "title": "A privacy-focused, real-time Islamic Q&A platform operating without personal data collection.",
+      "description": "Designed and developed solo using Nuxt and Supabase. The platform relies on browser fingerprinting to ensure an anonymous, safe discussion environment while maintaining a clean, responsive UI.",
+      "meta": "Solo Developer, 2026"
+    },
+    {
+      "id": "ahsantv-peduli",
+      "iconLabel": "AhsanTV Peduli",
+      "title": "A dynamic company profile and donation reporting platform for a religious broadcasting network.",
+      "description": "Built and deployed on Vercel, this platform features real-time donation reports, live streaming banners, weekly broadcast management via Supabase, and interactive web quizzes.",
+      "meta": "Sole IT Staff & Web Developer"
+    }
+  ]
+}
