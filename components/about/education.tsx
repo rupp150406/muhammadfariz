@@ -5,23 +5,15 @@ type Entry = {
   degree: string;
   period: string;
   slug?: string;
+  logoUrl?: string;
 };
 
 const ENTRIES: Entry[] = [
   {
-    school: "Rhode Island School of Design",
-    degree: "BFA, Graphic Design",
-    period: "2013 – 2017",
-  },
-  {
-    school: "Stanford University",
-    degree: "HCI Certificate, d.school",
-    period: "2018",
-  },
-  {
-    school: "Bruno Simon's Three.js Journey",
-    degree: "WebGL & Shaders",
-    period: "2022",
+    school: "IDN Polytechnic",
+    degree: "Diploma IV, Computer Engineering",
+    period: "2024 – 2028",
+    logoUrl: "https://chwjmwuqdbcmgnascxfg.supabase.co/storage/v1/object/sign/just%20me/idn.svg?token=eyJraWQiOiIwOGQ0ZmUxMi1lYmVhLTQwMTUtODg1NS1hMjQ1NjEyYjU5NzkiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJqdXN0IG1lL2lkbi5zdmciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzkxMTgzOTM5LCJleHAiOjI0MjE5MDM5Mzl9.k_uMb3MFpd47In9303UZ3konsKf9l89Qvr23MZ60pL4", // Place idn.png in your /public folder or use an external URL
   },
 ];
 
@@ -62,19 +54,23 @@ export function Education(): ReactNode {
 
 function SchoolLogo({ entry }: { entry: Entry }): ReactNode {
   const initials = entry.school.charAt(0);
+  const iconSrc =
+    entry.logoUrl ??
+    (entry.slug ? `https://cdn.simpleicons.org/${entry.slug}` : undefined);
+
   return (
     <span
-      className="border-foreground/15 inline-flex h-12 w-12 shrink-0 items-center justify-center border"
+      className="border-foreground/15 bg-foreground/3 inline-flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden border"
       aria-hidden="true"
       style={{ borderRadius: 14 }}
     >
-      {entry.slug ? (
+      {iconSrc ? (
         <img
-          src={`https://cdn.simpleicons.org/${entry.slug}`}
+          src={iconSrc}
           alt=""
-          width={24}
-          height={24}
-          className="h-6 w-6"
+          width={48}
+          height={48}
+          className="h-12 w-12 object-contain"
           draggable={false}
         />
       ) : (

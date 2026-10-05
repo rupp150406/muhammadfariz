@@ -9,58 +9,18 @@ type Entry = {
   role: string;
   period: string;
   slug?: string;
-  brand?: string;
+  logoUrl?: string;
 };
 
 const ENTRIES: Entry[] = [
   {
-    company: "Linear",
-    role: "Senior Design Engineer",
-    period: "Mar 2024 – Present",
-    slug: "linear",
-    brand: "#5E6AD2",
+    company: "AhsanTV Media",
+    role: "Junior Web Engineer",
+    period: "Feb 2026 – Jun 2026",
+    slug: "AhsanTV",
+    logoUrl: "https://chwjmwuqdbcmgnascxfg.supabase.co/storage/v1/object/sign/just%20me/ahsan.svg?token=eyJraWQiOiIwOGQ0ZmUxMi1lYmVhLTQwMTUtODg1NS1hMjQ1NjEyYjU5NzkiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJqdXN0IG1lL2Foc2FuLnN2ZyIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTExODQxMDQsImV4cCI6MjQyMTkwNDEwNH0.OO7iDKHvz5B2pyQi0NWcG0wKJxoCGmtsksmdPSpGCR8",
   },
-  {
-    company: "Vercel",
-    role: "Product Designer",
-    period: "Aug 2022 – Feb 2024",
-    slug: "vercel",
-    brand: "#0a0a0a",
-  },
-  {
-    company: "Stripe",
-    role: "Design Engineer",
-    period: "Jun 2021 – Jul 2022",
-    slug: "stripe",
-    brand: "#635BFF",
-  },
-  {
-    company: "Figma",
-    role: "UI Engineer",
-    period: "Sep 2019 – May 2021",
-    slug: "figma",
-    brand: "#A259FF",
-  },
-  {
-    company: "Notion",
-    role: "Product Designer",
-    period: "Jan 2018 – Aug 2019",
-    slug: "notion",
-    brand: "#111111",
-  },
-  {
-    company: "Airbnb",
-    role: "Design Intern",
-    period: "May 2017 – Dec 2017",
-    slug: "airbnb",
-    brand: "#FF5A5F",
-  },
-  {
-    company: "Freelance",
-    role: "Designer & Developer",
-    period: "2015 – 2017",
-    brand: "#0AE448",
-  },
+
 ];
 
 const COLLAPSED_COUNT = 2.5;
@@ -168,22 +128,26 @@ export function Experience(): ReactNode {
 
 function CompanyLogo({ entry }: { entry: Entry }): ReactNode {
   const initials = entry.company.charAt(0);
+  const iconSrc =
+    entry.logoUrl ??
+    (entry.slug ? `https://cdn.simpleicons.org/${entry.slug}` : undefined);
+
   return (
     <span
-      className="ring-foreground/8 inline-flex h-12 w-12 shrink-0 items-center justify-center bg-white ring-1 dark:ring-white/10"
+      className="ring-foreground/8 inline-flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden bg-white ring-1 dark:ring-white/10"
       aria-hidden="true"
       style={{
         borderRadius: 14,
-        ...(entry.slug ? {} : { backgroundColor: entry.brand }),
+        ...(iconSrc ? {} : { backgroundColor: entry.brand }),
       }}
     >
-      {entry.slug ? (
+      {iconSrc ? (
         <img
-          src={`https://cdn.simpleicons.org/${entry.slug}`}
+          src={iconSrc}
           alt=""
-          width={24}
-          height={24}
-          className="h-6 w-6"
+          width={28}
+          height={28}
+          className="h-10 w-10 object-contain"
           draggable={false}
         />
       ) : (
